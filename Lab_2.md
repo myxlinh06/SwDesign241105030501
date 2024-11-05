@@ -37,29 +37,29 @@
 # Login
 ### 1. Boundary Classes:
 - LoginForm: Giao diện nhập thông tin đăng nhập
- - Các trường nhập: username, password
+   - Các trường nhập: username, password
 - LoginErrorDialog: Dialog hiển thị thông báo lỗi
 ### 2. Entity Classes:
 - UserAccount: Lưu trữ thông tin tài khoản người dùng
- - Username
- - Password (đã mã hóa)
- - Role/Permission
- - AccountStatus
+   - Username
+   - Password (đã mã hóa)
+   - Role/Permission
+   - AccountStatus
 - UserSession: Quản lý phiên đăng nhập
- - SessionID
- - LoginTime
- - LastAccessTime
- - SessionStatus
+   - SessionID
+   - LoginTime
+   - LastAccessTime
+   - SessionStatus
 ### 3. Controller Classes:
 - LoginController: Điều khiển quá trình đăng nhập
- - verifyCredentials(): Kiểm tra thông tin đăng nhập
- - createUserSession(): Tạo phiên đăng nhập mới
- - handleLoginError(): Xử lý các trường hợp lỗi
- - logLoginAttempt(): Ghi log đăng nhập
+   - verifyCredentials(): Kiểm tra thông tin đăng nhập
+   - createUserSession(): Tạo phiên đăng nhập mới
+   - handleLoginError(): Xử lý các trường hợp lỗi
+   - logLoginAttempt(): Ghi log đăng nhập
 - AuthenticationManager: Quản lý xác thực
- - validateUser(): Xác thực người dùng
- - hashPassword(): Mã hóa mật khẩu
- - checkAccountStatus(): Kiểm tra trạng thái tài khoản
+   - validateUser(): Xác thực người dùng
+   - hashPassword(): Mã hóa mật khẩu
+   - checkAccountStatus(): Kiểm tra trạng thái tài khoản
 ### 4. Biểu đồ:
 - SD diagram:
 ![Diagram](https://www.planttext.com/api/plantuml/png/d59BJiGm3Dtd55x2OYxG1PfgEiE6GOWH1p2fAP7I13aE8yx6WYDn1PAsL5MLOK4NaVhizx7bxy-lRH1aYRrLgCKpF0LYfV8Bcnkuyvrn1yzz1NidD9OTzWJeMdZ04CwUMpMtpPoTTyBUMk8AJl6vDpBYqA2WMhLaLXtbbPmOZMAyEwB3BdCNC5qDgJHJcn6quLefjBAY9ZkjAOINQ1MahoYS7RDQhRMFJYfu9653xmGJ0Wq96Xi6YKKdR2vdJHgHNL7XGeZIjihJ32g5jULefrHFhHNicDAQu9xEC65p_Ec_RFbR7Fdj9Q_5CTmofWdhCHhPGElOXpJwfFJ_sRD8PFeppvxPSvEkmNSLD2QyMVo00OHZ2fUy5BbMgMrwyvN_0000__y30000)
@@ -73,23 +73,23 @@
 - DeleteConfirmDialog: Dialog xác nhận xóa
 ### 2. Entity Classes:
 - Employee: Lưu trữ thông tin nhân viên
- - employeeId
- - personalInfo 
- - employmentType 
- - paymentInfo 
- - deductions 
- - status (active/deleted)
+   - employeeId
+   - personalInfo 
+   - employmentType 
+   - paymentInfo 
+   - deductions 
+   - status (active/deleted)
 - PayrollSettings: Quản lý cấu hình lương
- - paymentMethods
+   - paymentMethods
 ### 3. Controller Classes:
 - EmployeeMaintenanceController: Điều khiển chức năng quản lý
- - addEmployee(): Thêm nhân viên mới
- - updateEmployee(): Cập nhật thông tin
- - deleteEmployee(): Đánh dấu xóa nhân viên
- - generateEmployeeId(): Tạo mã nhân viên mới
+   - addEmployee(): Thêm nhân viên mới
+   - updateEmployee(): Cập nhật thông tin
+   - deleteEmployee(): Đánh dấu xóa nhân viên
+   - generateEmployeeId(): Tạo mã nhân viên mới
 - EmployeeValidator: Kiểm tra tính hợp lệ
- - validatePersonalInfo(): Kiểm tra thông tin cá nhân
- - validatePayrollInfo(): Kiểm tra thông tin lương
+   - validatePersonalInfo(): Kiểm tra thông tin cá nhân
+   - validatePayrollInfo(): Kiểm tra thông tin lương
 ### 4.Biểu đồ:
 - SD diagram:
 ![Diagram](https://www.planttext.com/api/plantuml/png/d5L1Ri8m4Bpx5Vu0uXuf5LKJ92HG9H3SLydIMdBio7P0lAs7FgbVw8O0SKDCKd99v5tFZcT6pi_NzymwCAug98FCQSDVyq8eniulFddXQL5AVK9SWL0E5QWCjuk8xmGURpM-5DQntiu0n9jMpcWfqKHygI5leH9mq0VLxl0X8xv6PmGUC426JuO944HbrF1fV0fXPH9XImcd3XoBOv8sdwQvS6rfeVRQ5E24LZoE1qNVeCJCtUCCIp-dCRLb4NylqJjglNu_jkrE2Svuvg038IthDlgRTo153XGb2adpYG5tRvr_v6o7N-grE6kqbIGLGJf_ULDb6LhBE3sFE0MCty2Xoyr76f6-RLcVRqgEFC0Paq7wtWjJU81Zg8IZqk1qGeZIeY_VdCoi3Fv7FZ_X7b9gZ3QMeShFIKyegFxqvtBUGGcdl6cyI9W8aFg3G3xryIfhCxcfjDDxjrsDQ8gifsT4i4Om3zzdXRvBvJD9EdEWOpz_a_LcYCt8vFftyGi00F__0m00)
@@ -103,21 +103,21 @@
 - DeletePOConfirmDialog: Dialog xác nhận xóa
 ### 2. Entity Classes:
 - PurchaseOrder: Lưu trữ thông tin đơn hàng
- - orderID
- - customerInfo (contact, billing address)
- - products
- - orderDate
- - status (open/closed)
- - commissionedEmployeeID
+   - orderID
+   - customerInfo (contact, billing address)
+   - products
+   - orderDate
+   - status (open/closed)
+   - commissionedEmployeeID
 - Customer: Thông tin khách hàng
- - customerID
- - contactInfo
- - billingAddress
+   - customerID
+   - contactInfo
+   - billingAddress
 - Product: Thông tin sản phẩm
- - productID
- - name
- - price
- - quantity
+   - productID
+   - name
+   - price
+   - quantity
 ### 3. Controller Classes:
 - PurchaseOrderController: Xử lý nghiệp vụ đơn hàng
 - POValidator: Kiểm tra tính hợp lệ
